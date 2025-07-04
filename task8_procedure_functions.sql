@@ -1,5 +1,5 @@
 USE ecommerce_db;
--- 🔧 Procedure: Insert a new customer
+--  Procedure: Insert a new customer
 DELIMITER //
 
 CREATE PROCEDURE AddCustomer(
@@ -16,12 +16,12 @@ END;
 
 DELIMITER ;
 
--- ✅ Call the procedure
+--  Call the procedure
 CALL AddCustomer('Aarav', 'aarav@example.com', 'Mumbai', '9999988888');
 
 ------------------------------------------------------------
 
--- 📐 Function: Get total orders by a customer
+--  Function: Get total orders by a customer
 DELIMITER //
 
 CREATE FUNCTION TotalOrdersByCustomer(cust_id INT)
@@ -38,6 +38,6 @@ END;
 
 DELIMITER ;
 
--- ✅ Use the function
+--  Use the function
 SELECT Name, TotalOrdersByCustomer(CustomerID) AS total_orders
 FROM customers;
